@@ -6,6 +6,7 @@ const Navbar = () => {
     { name: "Rockets", path: "rockets" },
     { name: "Missions", path: "missions" },
     { name: "My Profile", path: "profile" },
+    { name: "Dragons", path: "dragons" },
   ];
   return (
     <nav className="navbar">
