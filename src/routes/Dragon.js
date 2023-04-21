@@ -1,10 +1,10 @@
 import Drogonlist from '../components/dragonList';
 
-const Dragon = () => {
+const Dragons = () => {
     return (
         <div>
             <Drogonlist />
         </div>
     );
 };
-export default Dragon;
+export default Dragons;
