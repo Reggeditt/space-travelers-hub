@@ -7,7 +7,6 @@ const initialState = {
 };
 
 export const fetchRockets = createAsyncThunk("rockets/fetchRockets", async (_, thunkApi) => {
-  console.log('fetchRockets is called');
   const response = await fetch("https://api.spacexdata.com/v4/rockets");
   const data = await response.json();
   let { rockets } = thunkApi.getState().rockets;
@@ -24,8 +23,8 @@ const rocketsSlice = createSlice({
     },
   },
   extraReducers: {
-    [fetchRockets.pending]: (state) => {
-      const newRockets = state;
+    [fetchRockets.pending]: (store) => {
+      const newRockets = store;
       newRockets.rockets = [];
       return newRockets;
     },
