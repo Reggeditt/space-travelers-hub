@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchDragon = createAsyncThunk('dragon/fetchDragon', async (_, thunkApi) => {
     const response = await fetch('https://api.spacexdata.com/v4/dragons');
