@@ -14,7 +14,14 @@ const missionsSlice = createSlice({
   name: "missions",
   initialState,
   reducers: {
-    addMission: (state, action) => {},
+    // addMission: (state, action) => {
+    //   const newState = state;
+    //   newState.missions.push(action.payload);
+    // },
+    // removeMission: (state, action) => {
+    //   const newState = state;
+    //   newState.missions = newState.missions.filter((mission) => mission.mission_name !== action.payload);
+    // },
   },
   extraReducers: {
     [fetchMissions.pending]: (state) => {
@@ -28,5 +35,7 @@ const missionsSlice = createSlice({
     [fetchMissions.rejected]: () => {},
   },
 });
+
+// export const { addMission, removeMission } = missionsSlice.actions;
 
 export default missionsSlice.reducer;
