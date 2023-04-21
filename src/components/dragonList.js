@@ -8,7 +8,7 @@ const DragonList = () => {
     useEffect(() => {
         dispatch(fetchDragon())
     }, []);
-    const dragon = useSelector((state) => state.dragon);
+    const dragon = useSelector((state) => state.dragon).dragon;
     console.log(dragon);
 
 };
